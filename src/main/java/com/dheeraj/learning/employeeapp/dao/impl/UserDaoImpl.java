@@ -35,7 +35,7 @@ public class UserDaoImpl implements UserDao {
     }
 
     public List<String> getAllUsers(){
-        String sql = "select first_name from employees limit 10";
+        String sql = "select first_name from employees limit 10000";
         List<String> users = jdbcTemplate.queryForList(sql,String.class);
         return users;
     }
