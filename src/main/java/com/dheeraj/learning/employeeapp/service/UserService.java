@@ -2,15 +2,14 @@ package com.dheeraj.learning.employeeapp.service;
 
 import com.dheeraj.learning.employeeapp.dto.Login;
 import com.dheeraj.learning.employeeapp.dto.User;
-import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 /**
  * Created by gopad on 30-04-2017.
  */
-@Service
-public class UserServiceImpl {
+public interface UserService {
+    User validateUser(Login login);
 
-    public User validateUser(Login login){
-        return new User();
-    }
+    List<String> getAllUsers();
 }
